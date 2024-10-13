@@ -1,0 +1,252 @@
+body {
+  background-color: #1a1a2e;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.app-container {
+  background-color: #16213e;
+  border-radius: 20px;
+  padding: 30px;
+  width: 350px;
+  height: 600px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.music-player {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h1, h2 {
+  margin-top: 0;
+  color: #e94560;
+}
+
+.album-cover {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.album-cover.rotating {
+  animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.song-info {
+  margin-bottom: 20px;
+}
+
+.song-info h3 {
+  margin-bottom: 5px;
+  color: #ffffff;
+}
+
+.song-info p {
+  color: #e94560;
+  margin-top: 0;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 5px;
+  background-color: #0f3460;
+  appearance: none;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+  margin-bottom: 20px;
+}
+
+.progress-bar:hover {
+  opacity: 1;
+}
+
+.progress-bar::-webkit-slider-thumb {
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background-color: #e94560;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.progress-bar::-moz-range-thumb {
+  width: 15px;
+  height: 15px;
+  background-color: #e94560;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.control-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: #ffffff;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.control-btn:hover {
+  color: #e94560;
+  transform: scale(1.1);
+}
+
+.play-pause {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #0f3460;
+  color: #e94560;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.play-pause:hover {
+  background-color: #e94560;
+  color: #0f3460;
+  transform: scale(1.1);
+}
+
+.bottom-nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0;
+  background-color: #0f3460;
+  border-radius: 0 0 20px 20px;
+}
+
+.bottom-nav button {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.bottom-nav button:hover {
+  color: #e94560;
+}
+
+.home, .playlist, .more {
+  color: #ffffff;
+  text-align: left;
+}
+
+.featured-section {
+  margin-top: 20px;
+}
+
+.featured-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.featured-section li {
+  background-color: #0f3460;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.featured-section li:hover {
+  background-color: #e94560;
+}
+
+.playlist ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.playlist li {
+  display: flex;
+  align-items: center;
+  background-color: #0f3460;
+  margin: 10px 0;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.playlist li:hover {
+  background-color: #e94560;
+}
+
+.song-thumbnail {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.song-details {
+  flex-grow: 1;
+}
+
+.song-details h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.song-details p {
+  margin: 5px 0 0;
+  font-size: 14px;
+  color: #e94560;
+}
+
+.more ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.more li {
+  background-color: #0f3460;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.more li:hover {
+  background-color: #e94560;
+}
